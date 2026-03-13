@@ -7,7 +7,7 @@ import React from 'react'
 interface MobileNavLinkProps {
   children: string
   href: string
-  onClick?: () => void
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void 
 }
 
 const MobileNavLink = ({ children, href,onClick }: MobileNavLinkProps) => {

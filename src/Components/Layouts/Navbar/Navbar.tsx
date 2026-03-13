@@ -19,7 +19,7 @@ const Navbar = () => {
  
 
   // dummy auth state
-  const isAuthenticate: boolean = true;
+  const isAuthenticate: boolean = false;
 
   // dummy user
   const user = {
@@ -58,7 +58,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='fixed top-0 left-0 right-0 z-30 bg-base-100 py-5 w-full border-b border-base-200'>
+    <div className='bg-base-100 py-5 w-full border-b border-base-200'>
 
       <nav className='w-11/12 md:w-10/12 mx-auto flex justify-between items-center relative'>
 

@@ -25,12 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme='light'>
       <body
-        className={`${poppins.variable} font-sans antialiased bg-base-100`}
+        className={`${poppins.variable} font-sans antialiased bg-base-100 flex flex-col min-h-screen`}
       >
         <header>
           <Navbar />
         </header>
-       <main>
+       <main className="flex-1 bg-gray-100">
          {children}
        </main>
       </body>
