@@ -17,7 +17,18 @@ const NavLink = ({children,href}:NavLinkProps) => {
     : pathName === href;
 
   return (
-    <Link className={`${isActive ? 'text-secondary font-semibold' : 'text-primary'} hover:text-secondary transition-colors duration-200`} href={href}>{children}</Link>
+   <Link 
+  className={`relative px-3 py-2 transition-all duration-300 group ${
+    isActive ? 'text-secondary font-bold' : 'text-primary hover:text-secondary'
+  }`} 
+  href={href}
+>
+  {children}
+  {/* Active Indicator */}
+  {isActive && (
+    <span className="absolute bottom-0 left-0 w-full h-1 bg-secondary rounded-full shadow-[0_0_10px_rgba(var(--secondary-rgb),0.5)]" />
+  )}
+</Link>
   )
 }
 

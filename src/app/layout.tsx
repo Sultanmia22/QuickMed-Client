@@ -27,10 +27,10 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} font-sans antialiased bg-base-100 flex flex-col min-h-screen`}
       >
-        <header>
+       
           <Navbar />
-        </header>
-       <main className="flex-1 bg-gray-100">
+       
+       <main className="flex-1">
          {children}
        </main>
       </body>

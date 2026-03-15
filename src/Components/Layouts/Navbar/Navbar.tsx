@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RxCross1 } from 'react-icons/rx'
 import { FaBars } from 'react-icons/fa'
 import NavLink from '@/Components/NavLink/NavLink'
@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   const [openProfileMenu, setOpenProfileMenu] = useState<boolean>(false)
- 
+
 
   // dummy auth state
   const isAuthenticate: boolean = false;
@@ -57,8 +57,12 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+
+
+
+
   return (
-    <div className='bg-base-100 py-5 w-full border-b border-base-200'>
+    <div className={`sticky top-0 z-40 bg-base-100 py-5 w-full border-b border-base-200`}>
 
       <nav className='w-11/12 md:w-10/12 mx-auto flex justify-between items-center relative'>
 
