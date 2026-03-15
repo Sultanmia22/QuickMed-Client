@@ -86,7 +86,9 @@ const RegisterForm = () => {
                                 placeholder="you@example.com"
                                 className="input input-bordered input-primary w-full"
                             />
+                            {errors?.email && <span className='text-red-400 text-sm'>errors.email.message</span>}
                         </div>
+                        
 
                         {/* Password Input */}
                         <div className="form-control mb-6 space-y-1">
@@ -109,7 +111,9 @@ const RegisterForm = () => {
                                 placeholder="••••••••"
                                 className="input input-bordered input-primary w-full"
                             />
+                            {errors?.password && <span className='text-red-400 text-sm'>{errors.password.message}</span>}
                         </div>
+                        
 
                         {/* Submit Button */}
                         <div className="form-control">
